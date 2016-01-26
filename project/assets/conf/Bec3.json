@@ -1,0 +1,14 @@
+{
+  "user": {
+    "login"    : "corentin.limoge",
+    "password" : "coucou" 
+  },
+  "objects" : [
+    {
+      "id"   : "X",
+      "type" : "light"
+    }
+    
+   
+  ]
+}
