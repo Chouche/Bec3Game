@@ -14,21 +14,15 @@ void stopSignal(int sig){
 }
 
 int main(int argc, const char **argv) {
-	bool test=false;
-	bool state;
 	Bec3 mySession = Bec3( "assets/conf/Bec3.json" );
-	
+	Key Right = Key("Right", &mySession);
+	Key Left = Key("Left", &mySession);
     signal(SIGINT, stopSignal); 
 	
 	while(done){
 		mySession.updateObjects();
-		state = mySession.getObjectState( "X" ).getBool();
-
-		if(test!=state){
-			SimuleKeyboard(state, "x");
-			test = state;
-			
-		}
+		Right.simulate();
+		Left.simulate();
 	}
 	
     return 0;

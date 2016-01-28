@@ -2,11 +2,19 @@
 #define FAKEKEYBOARD_HPP
 
 #include <string>
-#include <stdlib.h>
-#include <stdio.h>
-#include <iostream>
-#include <cstring>
+#include <Bec3-lib/Bec3.hpp>
 
-void SimuleKeyboard(bool state, std::string key);
+class Key {
+	private :
+		Bec3 *keySession;
+		std::string id;
+		bool previousState;
+	
+	public :
+		Key();
+		Key(std::string key, Bec3 *session);
+		~Key();
+		void simulate();
+};
 
 #endif
