@@ -5,11 +5,7 @@
   },
   "objects" : [
     {
-      "id"   : "Right",
-      "type" : "light"
-    },
-    {
-      "id"   : "Left",
+      "id"   : "space",
       "type" : "light"
     }
   ]

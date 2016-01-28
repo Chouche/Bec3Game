@@ -15,14 +15,12 @@ void stopSignal(int sig){
 
 int main(int argc, const char **argv) {
 	Bec3 mySession = Bec3( "assets/conf/Bec3.json" );
-	Key Right = Key("Right", &mySession);
-	Key Left = Key("Left", &mySession);
+	Key Space = Key("space", &mySession);
     signal(SIGINT, stopSignal); 
 	
 	while(done){
 		mySession.updateObjects();
-		Right.simulate();
-		Left.simulate();
+		Space.simulate();
 	}
 	
     return 0;
